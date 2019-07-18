@@ -5,7 +5,6 @@ from sqlalchemy import *
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel,cosine_similarity
-from sklearn.cluster import KMeans
 import numpy as np
 from pyspark.mllib.recommendation import ALS
 from pyspark import SparkContext
