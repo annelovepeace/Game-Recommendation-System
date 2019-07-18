@@ -42,7 +42,8 @@ with open(path_app_stats,'r') as f:
 
 
 with open(path_app_info, 'r') as f:
-	dic_steam_app = {'initial_price':{},'name':{},'score':{},'windows':{},'mac':{},'linux':{},'type':{},'release_date':{},'recommendation':{},'header_image':{},'currency':{},'success':{}}
+	dic_steam_app = {'initial_price':{},'name':{},'score':{},'windows':{},'mac':{},'linux':{},'type':{}, 'release_date':{},
+                    'recommendation':{},'header_image':{},'currency':{},'success':{}}
 	dic_about_the_game = {}
 	lst_raw_string = f.readlines()
 	total_count = len(lst_raw_string)
@@ -149,7 +150,7 @@ df_content_based_results.reset_index(inplace=True)
 df_content_based_results.to_sql('tbl_results_content_based',engine,if_exists='replace')
 
 
-# Model 3: item based
+# Model 3: Collaborative filtering - item based
 print 'Item Based Model'
 
 dic_purchase = {}
@@ -193,7 +194,7 @@ df_item_based_result.to_sql('tbl_results_item_based',engine,if_exists='replace')
 
 
 
-# Model 4: Collaborative Filtering
+# Model 4: Collaborative Filtering - user based
 # NOTE: This model requires PySpark
 
 print 'ALS Model'
