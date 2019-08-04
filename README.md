@@ -15,7 +15,8 @@ according to multiple machine learning models.
 
 ### Data Collection
 1. select 5000 Steam ID
-2. develop a web crawler in Python to get Steam users' inventory and playing behaviors from Steam API using these 5000 IDs
+2. develop a web crawler in Python to get Steam users' inventory and <br>
+playing behaviors from Steam API using these 5000 IDs
 3. get Steam game app IDs and stats from Steamspy API
 4. develop a web crawler in Python to get Steam games' details
 
